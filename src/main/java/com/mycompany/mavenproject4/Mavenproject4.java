@@ -4,6 +4,9 @@
 
 package com.mycompany.mavenproject4;
 
+import java.io.File;
+import java.io.IOException;
+
 /**
  *
  * @author Rodolfo
@@ -11,6 +14,22 @@ package com.mycompany.mavenproject4;
 public class Mavenproject4 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+         
+        // File file = new File("datos.txt");
+        File file = new File("datos.txt");
+    
+        
+        try {
+            
+            if (file.createNewFile()) {
+                System.out.println("Archivo creado con éxito.");
+            } else {
+                System.out.println("El archivo ya existe.");
+            }
+        } catch (IOException e) {
+            System.out.println("Error al crear el archivo.");
+        }
+        
+    
     }
 }
