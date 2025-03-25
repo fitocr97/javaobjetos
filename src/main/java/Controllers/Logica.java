@@ -22,12 +22,12 @@ public class Logica {
     
     public void insertar(Estudiante est){
         try {
-            
+            System.out.println("entro al insertar");
             FileWriter writer = new FileWriter("datos.txt", true); 
             
             //Creamos un string
-            String cadena = estudiante.getNombre() + "-" + estudiante.getProyecto1() +"-"+ estudiante.getExamen1() + "-" + estudiante.getExamen2() + "-" + estudiante.getProyecto2();
-            
+            String cadena = est.getNombre()+"-"+est.getProyecto1()+"-"+est.getExamen1()+"-"+est.getExamen2()+"-"+est.getProyecto2();
+            System.out.println(cadena);
             writer.write(cadena); //guardar en archivo
             writer.write(10);
             writer.close();
